@@ -1,69 +1,96 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X, Search } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <>
       {/* Header Top */}
       <div className="bg-primary text-primary-foreground py-3">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-4">
-                <Link href="/login" className="flex items-center space-x-2 hover:text-accent">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-sm">
+            {/* Left Section - Login/Register and Email */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full md:w-auto">
+              {/* Login/Register Links */}
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/login"
+                  className="flex items-center gap-2 hover:text-accent transition-colors"
+                >
                   <Image
-                    src="/assets/icon-2.jpg"
+                    src="/assets/icon-2.png"
                     alt="Login"
                     width={16}
                     height={16}
                     className="w-4 h-4"
                   />
-                  <span>Login</span>
+                  <span className="whitespace-nowrap">Login</span>
                 </Link>
-                <Link href="/register" className="flex items-center space-x-2 hover:text-accent">
+                <Link
+                  href="/register"
+                  className="flex items-center gap-2 hover:text-accent transition-colors"
+                >
                   <Image
-                    src="/assets/icon-2.jpg"
+                    src="/assets/icon-2.png"
                     alt="Register"
                     width={16}
                     height={16}
                     className="w-4 h-4"
                   />
-                  <span>Register</span>
+                  <span className="whitespace-nowrap">Register</span>
                 </Link>
               </div>
-              <div className="flex items-center space-x-2">
+
+              {/* Email */}
+              <div className="flex items-center gap-2">
                 <Image
-                  src="/assets/icon-3.jpg"
+                  src="/assets/icon-3.png"
                   alt="Email"
                   width={16}
                   height={16}
                   className="w-4 h-4"
                 />
-                <a href="mailto:info@ntalccul.org" className="hover:text-accent">
+                <a
+                  href="mailto:info@ntalccul.org"
+                  className="hover:text-accent transition-colors whitespace-nowrap text-xs sm:text-sm"
+                >
                   info@ntalccul.org
                 </a>
               </div>
             </div>
-            <div className="flex items-center space-x-6">
-              <Link href="/careers" className="hover:text-accent">
+
+            {/* Right Section - Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 w-full md:w-auto">
+              <Link
+                href="/careers"
+                className="hover:text-accent transition-colors whitespace-nowrap text-xs sm:text-sm"
+              >
                 Careers
               </Link>
-              <Link href="/faqs" className="hover:text-accent">
+              <Link
+                href="/faqs"
+                className="hover:text-accent transition-colors whitespace-nowrap text-xs sm:text-sm"
+              >
                 FAQ's
               </Link>
-              <Link href="/debit-card" className="hover:text-accent">
-                NtalCCUL Card
+              <Link
+                href="/debit-card"
+                className="hover:text-accent transition-colors whitespace-nowrap text-xs sm:text-sm"
+              >
+                NtaLCCUL Card
               </Link>
-              <Link href="/apply-now" className="hover:text-accent">
+              <Link
+                href="/apply-now"
+                className="hover:text-accent transition-colors whitespace-nowrap text-xs sm:text-sm"
+              >
                 Apply Now
               </Link>
             </div>
@@ -72,35 +99,43 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="bg-background shadow-lg sticky top-0 z-50">
+      <header className="h-[5rem] md:h-auto bg-background shadow-lg sticky top-0 z-50 ">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-between md:py-4 md:m-2">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/assets/ntalccul-logo.png"
-                alt="NtalCCUL Logo"
+                alt="NtaLCCUL Logo"
                 width={300}
                 height={95}
-                className="h-16 w-auto"
+                className="h-16 w-auto "
               />
-              <h1 className="text-yellow-600 font-bold text-lg"> NtalCCUL</h1>
+              <h1 className="text-yellow-600 font-bold text-2xl"> NtaLCCUL</h1>
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <Link href="/" className="text-foreground hover:text-primary font-medium">
+              <Link
+                href="/"
+                className="text-foreground hover:text-primary font-medium"
+              >
                 Home
               </Link>
 
               <div className="relative group">
-                <button className="text-foreground hover:text-primary font-medium flex items-center">Services</button>
+                <button className="text-foreground hover:text-primary font-medium flex items-center">
+                  Services
+                </button>
                 <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[200px]">
                   <div className="space-y-2">
                     <Link href="/accounts" className="block hover:text-primary">
                       Accounts
                     </Link>
-                    <Link href="/digital-services" className="block hover:text-primary">
+                    <Link
+                      href="/digital-services"
+                      className="block hover:text-primary"
+                    >
                       Digital Services
                     </Link>
                     <Link href="/cards" className="block hover:text-primary">
@@ -111,13 +146,18 @@ export default function Header() {
               </div>
 
               <div className="relative group">
-                <button className="text-foreground hover:text-primary font-medium">About</button>
+                <button className="text-foreground hover:text-primary font-medium">
+                  About
+                </button>
                 <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[200px]">
                   <div className="space-y-2">
                     <Link href="/about-us" className="block hover:text-primary">
                       About Us
                     </Link>
-                    <Link href="/leadership" className="block hover:text-primary">
+                    <Link
+                      href="/leadership"
+                      className="block hover:text-primary"
+                    >
                       Leadership
                     </Link>
                     <Link href="/careers" className="block hover:text-primary">
@@ -127,13 +167,22 @@ export default function Header() {
                 </div>
               </div>
 
-              <Link href="/apply-now" className="text-foreground hover:text-primary font-medium">
+              <Link
+                href="/apply-now"
+                className="text-foreground hover:text-primary font-medium"
+              >
                 Apply Now
               </Link>
-              <Link href="/contact" className="text-foreground hover:text-primary font-medium">
+              <Link
+                href="/contact"
+                className="text-foreground hover:text-primary font-medium"
+              >
                 Get In Touch
               </Link>
-              <Link href="/branch-code" className="text-foreground hover:text-primary font-medium">
+              <Link
+                href="/branch-code"
+                className="text-foreground hover:text-primary font-medium"
+              >
                 Branch Code
               </Link>
             </nav>
@@ -172,8 +221,15 @@ export default function Header() {
               </Button>
 
               {/* Mobile Menu Button */}
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden p-2">
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="lg:hidden p-2"
+              >
+                {isMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
               </button>
             </div>
           </div>
@@ -202,13 +258,17 @@ export default function Header() {
                   <Link href="/" onClick={() => setIsMenuOpen(false)}>
                     <Image
                       src="/assets/ntalccul-logo.png"
-                      alt="NtalCCUL Logo"
+                      alt="NtaLCCUL Logo"
                       width={150}
                       height={48}
                       className="h-12 w-auto"
                     />
+                    <h1 className="text-yellow-600 font-bold text-lg"> NtaLCCUL</h1>
                   </Link>
-                  <button onClick={() => setIsMenuOpen(false)} className="text-white p-2">
+                  <button
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-white p-2"
+                  >
                     <X className="w-6 h-6" />
                   </button>
                 </div>
@@ -257,7 +317,8 @@ export default function Header() {
                     <a href="tel:+1234567890">Call Us</a>
                   </Button>
                   <div className="text-center text-white/50 text-sm mt-4">
-                    &copy; {new Date().getFullYear()} NtalCCUL. All rights reserved.
+                    &copy; {new Date().getFullYear()} NtaLCCUL. All rights
+                    reserved.
                   </div>
                 </div>
               </motion.div>
@@ -290,5 +351,5 @@ export default function Header() {
         </div>
       )}
     </>
-  )
+  );
 }

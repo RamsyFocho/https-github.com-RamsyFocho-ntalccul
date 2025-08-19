@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react"
+import { Mail, Phone, MapPin, Clock, ArrowRight,Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -12,8 +12,8 @@ export default function Footer() {
             {/* Contact Information */}
             <div className="lg:col-span-2 space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="bg-primary p-3 rounded-lg">
-                  <Image src="/assets/ntalccul-logo.png" alt="Certified" width={40} height={40} />
+                <div className="bg-transparent rounded-lg">
+                  <Image src="/assets/ntalccul-logo.png" alt="Certified" width={50} height={40} />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold">Since 1972</h4>
@@ -89,7 +89,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link href="/credit-card" className="hover:text-primary transition-colors">
-                    NtalCCUL Card
+                    NtaLCCUL Card
                   </Link>
                 </li>
               </ul>
@@ -103,7 +103,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/trade-fx" className="hover:text-primary transition-colors">
-                    NtalCCUL Card
+                    NtaLCCUL Card
                   </Link>
                 </li>
                 <li>
@@ -140,7 +140,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/debit-card" className="hover:text-primary transition-colors">
-                    NtalCCUL Card
+                    NtaLCCUL Card
                   </Link>
                 </li>
                 <li>
@@ -181,12 +181,28 @@ export default function Footer() {
 
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-sm text-muted-foreground">Follow Us On</div>
-
+            <div className="flex items-center mt-4">
+  <div className="text-sm text-gray-600">Follow Us On</div>
+  <div className="ml-4 flex items-center">
+    <a href="#" className="text-gray-600 hover:text-gray-900 transition duration-300">
+      <Facebook size={20} />
+    </a>
+    <a href="#" className="ml-4 text-gray-600 hover:text-gray-900 transition duration-300">
+      <Twitter size={20} />
+    </a>
+    <a href="#" className="ml-4 text-gray-600 hover:text-gray-900 transition duration-300">
+      <Instagram size={20} />
+    </a>
+    <a href="#" className="ml-4 text-gray-600 hover:text-gray-900 transition duration-300">
+      <Linkedin size={20} />
+    </a>
+  </div>
+</div>
+{/* ------- */}
             <div className="flex items-center space-x-4">
               <Image
                 src="/assets/ntalccul-logo.png"
-                alt="NtalCCUL"
+                alt="NtaLCCUL"
                 width={200}
                 height={60}
                 className="h-12 w-auto"
@@ -207,7 +223,7 @@ export default function Footer() {
           </div>
 
           <div className="text-center mt-6 pt-6 border-t border-border">
-            <p className="text-sm text-muted-foreground">Copyright © 2025 NtalCCUL. All Rights Reserved.</p>
+            <p className="text-sm text-muted-foreground">Copyright © 2025 NtaLCCUL. All Rights Reserved.</p>
           </div>
         </div>
       </div>

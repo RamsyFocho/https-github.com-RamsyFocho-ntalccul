@@ -23,7 +23,7 @@ export default function BlogSection() {
       excerpt: "Learn what affects your credit score and actionable steps to improve your creditworthiness.",
       author: "Credit Advisor",
       date: "March 10, 2024",
-      image: "/placeholder.jpg",
+      image: "/assets/understand.jpg",
       category: "Credit",
     },
     {
@@ -31,7 +31,7 @@ export default function BlogSection() {
       excerpt: "Essential tips to keep your online banking secure and protect yourself from cyber threats.",
       author: "Security Team",
       date: "March 5, 2024",
-      image: "/placeholder.jpg",
+      image: "/assets/money.jpg",
       category: "Security",
     },
   ]

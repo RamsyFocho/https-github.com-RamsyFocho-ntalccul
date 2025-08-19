@@ -33,7 +33,7 @@ export default function Loader() {
     }
   }, [imageLoaded])
 
-  const letters = ["N", "t", "a", "C", "C", "U", "L"]
+  const letters = ["N", "t", "a", "L", "C", "C", "U", "L"]
 
   return (
     <AnimatePresence>

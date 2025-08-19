@@ -12,7 +12,7 @@ export default function SecureGrowth() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Secure Growth for Your Future</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              At NtalCCUL, we combine cutting-edge security with proven growth strategies to ensure your financial future
+              At NtaLCCUL, we combine cutting-edge security with proven growth strategies to ensure your financial future
               is both safe and prosperous.
             </p>
 
@@ -53,7 +53,7 @@ export default function SecureGrowth() {
               alt="Secure Growth"
               className="rounded-lg shadow-lg w-full"
             />
-            <div className="absolute -bottom-6 -right-6 bg-primary/90 text-primary-foreground p-4 rounded-lg shadow-lg">
+            <div className="absolute -bottom-6 -right-3 md:-right-6 bg-primary/90 text-primary-foreground p-4 rounded-lg shadow-lg">
               <div className="text-2xl font-bold">99.9%</div>
               <div className="text-sm">Uptime Guarantee</div>
             </div>

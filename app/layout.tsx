@@ -18,7 +18,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "NtalCCUL - Ntarinkon Credit and Cooperative Union Limited",
+  title: "NtaLCCUL - Ntahnkah  Legacy Credit and Cooperative Union Limited",
   description:
     "Your trusted banking partner since 1972. Offering comprehensive banking services including savings accounts, loans, credit cards, and digital banking solutions.",
   keywords: "banking, credit union, loans, savings, NtalCCUL, Cameroon banking",

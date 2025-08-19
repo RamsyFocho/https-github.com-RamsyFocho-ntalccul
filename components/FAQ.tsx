@@ -9,7 +9,7 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "How do I open an account with NtalCCUL?",
+      question: "How do I open an account with NtaLCCUL?",
       answer:
         "Opening an account is simple! Visit any of our branches with a valid ID, proof of address, and initial deposit. You can also start the process online and complete it at your nearest branch.",
     },
