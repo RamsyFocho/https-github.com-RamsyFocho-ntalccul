@@ -9,7 +9,7 @@ export default function BlogSection() {
       excerpt: "Discover practical strategies to build your savings and achieve your financial goals this year.",
       author: "Financial Team",
       date: "March 15, 2024",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/placeholder.jpg",
       category: "Savings",
     },
     {
@@ -17,7 +17,7 @@ export default function BlogSection() {
       excerpt: "Learn what affects your credit score and actionable steps to improve your creditworthiness.",
       author: "Credit Advisor",
       date: "March 10, 2024",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/placeholder.jpg",
       category: "Credit",
     },
     {
@@ -25,7 +25,7 @@ export default function BlogSection() {
       excerpt: "Essential tips to keep your online banking secure and protect yourself from cyber threats.",
       author: "Security Team",
       date: "March 5, 2024",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/placeholder.jpg",
       category: "Security",
     },
   ]
@@ -34,8 +34,8 @@ export default function BlogSection() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Financial Insights & News</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Financial Insights & News</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Stay informed with the latest financial tips, market insights, and banking news
           </p>
         </div>
@@ -46,17 +46,17 @@ export default function BlogSection() {
               <div className="relative">
                 <img src={post.image || "/placeholder.svg"} alt={post.title} className="w-full h-48 object-cover" />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                  <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
                     {post.category}
                   </span>
                 </div>
               </div>
 
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">{post.title}</h3>
+                <p className="text-muted-foreground mb-4 line-clamp-3">{post.excerpt}</p>
 
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center">
                       <User className="w-4 h-4 mr-1" />
