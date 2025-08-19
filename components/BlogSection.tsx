@@ -2,7 +2,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, User, ArrowRight } from "lucide-react"
 
+import { motion, useInView } from "framer-motion"
+import { fadeUp, sectionFade } from "@/lib/utils"
+
 export default function BlogSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, threshold: 0.1 })
   const blogPosts = [
     {
       title: "5 Smart Ways to Save Money in 2024",
@@ -31,7 +36,13 @@ export default function BlogSection() {
   ]
 
   return (
-    <section className="py-16 bg-white">
+    <motion.section 
+      className="py-16 bg-white"
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={sectionFade}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Financial Insights & News</h2>
@@ -42,7 +53,8 @@ export default function BlogSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {blogPosts.map((post, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <motion.div variants={fadeUp}>
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative">
                 <img src={post.image || "/placeholder.svg"} alt={post.title} className="w-full h-48 object-cover" />
                 <div className="absolute top-4 left-4">
@@ -74,7 +86,8 @@ export default function BlogSection() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                 </Button>
               </CardContent>
-            </Card>
+              </Card>
+            </motion.div>
           ))}
         </div>
 
