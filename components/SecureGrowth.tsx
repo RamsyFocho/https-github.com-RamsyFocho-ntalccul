@@ -1,4 +1,8 @@
+"use client"
+
 import { Shield, TrendingUp, Award } from "lucide-react"
+import { motion } from "framer-motion"
+import { fadeUp, sectionFade } from "@/lib/utils"
 
 export default function SecureGrowth() {
   return (
@@ -8,7 +12,7 @@ export default function SecureGrowth() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Secure Growth for Your Future</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              At NtaCCUL, we combine cutting-edge security with proven growth strategies to ensure your financial future
+              At NtalCCUL, we combine cutting-edge security with proven growth strategies to ensure your financial future
               is both safe and prosperous.
             </p>
 
@@ -45,7 +49,7 @@ export default function SecureGrowth() {
 
           <div className="relative">
             <img
-              src="/placeholder.jpg"
+              src="/assets/growth-1-1.jpg"
               alt="Secure Growth"
               className="rounded-lg shadow-lg w-full"
             />

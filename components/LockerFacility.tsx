@@ -1,6 +1,10 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Lock, Shield, Clock, Key } from "lucide-react"
+import { motion } from "framer-motion"
+import { fadeUp, sectionFade } from "@/lib/utils"
 
 export default function LockerFacility() {
   const lockerSizes = [
@@ -37,7 +41,7 @@ export default function LockerFacility() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <img
-              src="/placeholder.jpg"
+              src="/assets/locker-1-1.jpg"
               alt="Safe Deposit Lockers"
               className="rounded-lg shadow-lg w-full"
             />
