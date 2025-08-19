@@ -76,14 +76,15 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-2">
               <Image
-                src="https://ntaccul.org/wp-content/uploads/2025/04/NTACCUL-LOGO.jpg"
+                src="/assets/ntalccul-logo.png"
                 alt="NtaCCUL Logo"
                 width={300}
                 height={95}
                 className="h-16 w-auto"
               />
+              <h1 className="text-yellow-600 font-bold text-lg"> NtalCCUL</h1>
             </Link>
 
             {/* Desktop Navigation */}
@@ -182,34 +183,84 @@ export default function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ type: "tween", duration: 0.3 }}
-              className="lg:hidden bg-white border-t fixed top-0 left-0 w-full h-full z-40 pt-20"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
+              onClick={() => setIsMenuOpen(false)}
             >
-              <div className="container mx-auto px-4 py-4">
-                <nav className="space-y-4">
-                  <Link href="/" className="block text-foreground hover:text-primary text-lg py-2">
-                    Home
+              <motion.div
+                initial={{ x: "-100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                className="fixed top-0 left-0 w-4/5 max-w-sm h-full bg-gradient-to-br from-primary to-primary-dark shadow-2xl p-6 flex flex-col"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex justify-between items-center mb-8">
+                  <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                    <Image
+                      src="/assets/ntalccul-logo.png"
+                      alt="NtaCCUL Logo"
+                      width={150}
+                      height={48}
+                      className="h-12 w-auto"
+                    />
                   </Link>
-                  <Link href="/services" className="block text-foreground hover:text-primary text-lg py-2">
-                    Services
-                  </Link>
-                  <Link href="/about" className="block text-foreground hover:text-primary text-lg py-2">
-                    About
-                  </Link>
-                  <Link href="/apply-now" className="block text-foreground hover:text-primary text-lg py-2">
-                    Apply Now
-                  </Link>
-                  <Link href="/contact" className="block text-foreground hover:text-primary text-lg py-2">
-                    Contact
-                  </Link>
-                  <Button asChild className="w-full mt-4">
-                    <Link href="/accounts">New Account</Link>
-                  </Button>
+                  <button onClick={() => setIsMenuOpen(false)} className="text-white p-2">
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+
+                <nav className="flex-grow">
+                  <motion.ul
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                      visible: {
+                        transition: {
+                          staggerChildren: 0.1,
+                        },
+                      },
+                    }}
+                    className="space-y-4"
+                  >
+                    {[
+                      { href: "/", label: "Home" },
+                      { href: "/services", label: "Services" },
+                      { href: "/about", label: "About" },
+                      { href: "/apply-now", label: "Apply Now" },
+                      { href: "/contact", label: "Contact" },
+                    ].map((item, i) => (
+                      <motion.li
+                        key={i}
+                        variants={{
+                          hidden: { opacity: 0, y: 20 },
+                          visible: { opacity: 1, y: 0 },
+                        }}
+                      >
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="block text-white hover:bg-white/10 rounded-md text-lg py-3 px-4 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      </motion.li>
+                    ))}
+                  </motion.ul>
                 </nav>
-              </div>
+
+                <div className="mt-auto">
+                  <Button variant="secondary" className="w-full" asChild>
+                    <a href="tel:+1234567890">Call Us</a>
+                  </Button>
+                  <div className="text-center text-white/50 text-sm mt-4">
+                    &copy; {new Date().getFullYear()} NtaCCUL. All rights reserved.
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>

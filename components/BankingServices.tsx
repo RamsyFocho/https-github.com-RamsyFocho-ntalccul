@@ -5,45 +5,45 @@ import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion, useInView } from "framer-motion"
-
+import { fadeUp, sectionFade } from "@/lib/utils"
 export default function BankingServices() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, threshold: 0.1 })
 
   const services = [
     {
-      icon: "https://ntaccul.org/wp-content/uploads/2025/05/icon-13.png",
+      icon: "/assets/icon-13.png",
       title: "Fixed Deposit",
       description: "Higher Returns & Security with guaranteed returns and flexible tenure options.",
       features: ["100% Guaranteed returns", "Loan against FD available", "Flexible tenure options"],
     },
     {
-      icon: "https://ntaccul.org/wp-content/uploads/2025/05/icon-12-1.png",
+      icon: "/assets/icon-12-1.png",
       title: "Savings Account",
       description:
         "Grow your money with competitive interest rates and flexible savings plans tailored to your financial goals.",
       features: ["High interest rates", "Flexible deposits", "Goal-based savings"],
     },
     {
-      icon: "https://ntaccul.org/wp-content/uploads/2025/05/icon-14-1.png",
+      icon: "/assets/icon-14-1.png",
       title: "Investment Services",
       description: "Secure you & your family with diverse investment portfolio and expert financial advisory services.",
       features: ["Portfolio management", "Expert advice", "Risk assessment"],
     },
     {
-      icon: "https://ntaccul.org/wp-content/uploads/2025/05/icon-15-1.png",
+      icon: "/assets/icon-15-1.png",
       title: "Family 360°",
       description: "Complete banking solutions for your entire family with comprehensive coverage options.",
       features: ["Family accounts", "Insurance coverage", "Financial planning"],
     },
     {
-      icon: "https://ntaccul.org/wp-content/uploads/2024/09/certified-1-1.png",
+      icon: "/assets/certified-1-1.png",
       title: "Group Banking",
       description: "Special banking solutions designed for cooperatives, associations, and group savings.",
       features: ["Group accounts", "Bulk transactions", "Member management"],
     },
     {
-      icon: "https://ntaccul.org/wp-content/themes/flexibank/assets/images/icons/icon-38.png",
+      icon: "/assets/icon-38.png",
       title: "Business Banking",
       description: "Comprehensive banking solutions to help your business grow and manage finances effectively.",
       features: ["Business loans", "Merchant services", "Cash management"],
@@ -58,6 +58,7 @@ export default function BankingServices() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
+          variants={sectionFade}
         >
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-foreground mb-4"

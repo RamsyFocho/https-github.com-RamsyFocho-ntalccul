@@ -27,8 +27,8 @@ export default function LoanCalculator() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Loan Calculator</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Loan Calculator</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Calculate your monthly loan payments and plan your finances with our interactive calculator
           </p>
         </div>
@@ -87,20 +87,20 @@ export default function LoanCalculator() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
-                    <span className="text-gray-600">Monthly Payment</span>
-                    <span className="text-2xl font-bold text-blue-600">{calculateMonthlyPayment()} FCFA</span>
+                  <div className="flex justify-between items-center p-4 bg-primary/10 rounded-lg">
+                    <span className="text-muted-foreground">Monthly Payment</span>
+                    <span className="text-2xl font-bold text-primary">{calculateMonthlyPayment()} FCFA</span>
                   </div>
 
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                    <span className="text-gray-600">Total Amount</span>
+                  <div className="flex justify-between items-center p-3 bg-muted rounded-lg">
+                    <span className="text-muted-foreground">Total Amount</span>
                     <span className="font-semibold">
                       {(Number.parseFloat(calculateMonthlyPayment()) * loanTerm[0] * 12).toLocaleString()} FCFA
                     </span>
                   </div>
 
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                    <span className="text-gray-600">Total Interest</span>
+                  <div className="flex justify-between items-center p-3 bg-muted rounded-lg">
+                    <span className="text-muted-foreground">Total Interest</span>
                     <span className="font-semibold">
                       {(
                         Number.parseFloat(calculateMonthlyPayment()) * loanTerm[0] * 12 -
@@ -111,7 +111,7 @@ export default function LoanCalculator() {
                   </div>
                 </div>
 
-                <Button className="w-full mt-6 bg-blue-600 hover:bg-blue-700">Apply for Loan</Button>
+                <Button className="w-full mt-6 bg-primary hover:bg-primary/90">Apply for Loan</Button>
               </CardContent>
             </Card>
           </div>

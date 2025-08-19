@@ -28,11 +28,11 @@ export default function CreditCards() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Credit Cards</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Credit Cards</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Choose from our range of credit cards designed to match your lifestyle and spending needs
           </p>
         </div>
@@ -56,14 +56,14 @@ export default function CreditCards() {
               <CardContent className="p-6">
                 <ul className="space-y-3 mb-6">
                   {card.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-600">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                    <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                      <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">Apply Now</Button>
+                <Button className="w-full bg-primary hover:bg-primary/90">Apply Now</Button>
               </CardContent>
             </Card>
           ))}
@@ -71,27 +71,27 @@ export default function CreditCards() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="text-center">
-            <Shield className="w-12 h-12 text-blue-600 mx-auto mb-3" />
-            <h3 className="font-semibold text-gray-900 mb-2">Secure Transactions</h3>
-            <p className="text-sm text-gray-600">Advanced security features protect every purchase</p>
+            <Shield className="w-12 h-12 text-primary mx-auto mb-3" />
+            <h3 className="font-semibold text-foreground mb-2">Secure Transactions</h3>
+            <p className="text-sm text-muted-foreground">Advanced security features protect every purchase</p>
           </div>
 
           <div className="text-center">
-            <Gift className="w-12 h-12 text-green-600 mx-auto mb-3" />
-            <h3 className="font-semibold text-gray-900 mb-2">Reward Points</h3>
-            <p className="text-sm text-gray-600">Earn points on every transaction and redeem rewards</p>
+            <Gift className="w-12 h-12 text-accent mx-auto mb-3" />
+            <h3 className="font-semibold text-foreground mb-2">Reward Points</h3>
+            <p className="text-sm text-muted-foreground">Earn points on every transaction and redeem rewards</p>
           </div>
 
           <div className="text-center">
-            <Zap className="w-12 h-12 text-purple-600 mx-auto mb-3" />
-            <h3 className="font-semibold text-gray-900 mb-2">Instant Approval</h3>
-            <p className="text-sm text-gray-600">Get approved in minutes with our digital process</p>
+            <Zap className="w-12 h-12 text-secondary-foreground mx-auto mb-3" />
+            <h3 className="font-semibold text-foreground mb-2">Instant Approval</h3>
+            <p className="text-sm text-muted-foreground">Get approved in minutes with our digital process</p>
           </div>
 
           <div className="text-center">
-            <CreditCard className="w-12 h-12 text-orange-600 mx-auto mb-3" />
-            <h3 className="font-semibold text-gray-900 mb-2">Global Acceptance</h3>
-            <p className="text-sm text-gray-600">Use your card anywhere in the world</p>
+            <CreditCard className="w-12 h-12 text-accent-foreground mx-auto mb-3" />
+            <h3 className="font-semibold text-foreground mb-2">Global Acceptance</h3>
+            <p className="text-sm text-muted-foreground">Use your card anywhere in the world</p>
           </div>
         </div>
       </div>

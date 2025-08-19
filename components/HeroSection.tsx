@@ -14,7 +14,7 @@ const slides = [
     description: "Enjoy zero free banking on your sb account.",
     buttonText: "Book a Consultation",
     buttonLink: "#",
-    backgroundImage: "https://ntaccul.org/wp-content/uploads/2024/09/banner-1-1.jpg",
+    backgroundImage: "/assets/banner-1.jpg",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const slides = [
     description: "Fuel your business growth with our easy loan",
     buttonText: "Apply Your Loan",
     buttonLink: "#",
-    backgroundImage: "https://ntaccul.org/wp-content/uploads/2024/09/banner-2-1.jpg",
+    backgroundImage: "/assets/banner-2.png",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const slides = [
     description: "Maximize benefits with your every transaction",
     buttonText: "Apply Your Card",
     buttonLink: "#",
-    backgroundImage: "https://ntaccul.org/wp-content/uploads/2024/09/banner-3-1.jpg",
+    backgroundImage: "/assets/banner-3.png",
   },
 ]
 

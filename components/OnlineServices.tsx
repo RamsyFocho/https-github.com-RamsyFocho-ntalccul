@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { motion, useInView } from "framer-motion"
+import { fadeUp, sectionFade } from "@/lib/utils"
 
 export default function OnlineServices() {
   const ref = useRef(null)
@@ -19,6 +20,7 @@ export default function OnlineServices() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8 }}
+          variants={sectionFade}
         >
           <motion.div
             className="space-y-6"
@@ -38,7 +40,7 @@ export default function OnlineServices() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Image
-                  src="https://ntaccul.org/wp-content/uploads/2025/05/icon-173.png"
+                  src="/assets/icon-173.png"
                   alt="Mobile App"
                   width={32}
                   height={32}
@@ -61,7 +63,7 @@ export default function OnlineServices() {
                 <Button variant="outline" asChild>
                   <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer">
                     <Image
-                      src="/placeholder.svg?height=20&width=20"
+                      src="/placeholder-logo.svg"
                       alt="Google Play"
                       width={20}
                       height={20}
@@ -75,7 +77,7 @@ export default function OnlineServices() {
                 <Button variant="outline" asChild>
                   <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
                     <Image
-                      src="/placeholder.svg?height=20&width=20"
+                      src="/placeholder-logo.svg"
                       alt="App Store"
                       width={20}
                       height={20}
@@ -102,7 +104,7 @@ export default function OnlineServices() {
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="https://ntaccul.org/wp-content/uploads/2024/09/online-1-1.jpg"
+                src="/assets/online-1.jpg"
                 alt="Online Banking"
                 width={300}
                 height={200}

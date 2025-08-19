@@ -10,28 +10,28 @@ const stats = [
     count: 8500,
     suffix: "k",
     label: "Happy Customers World Wide.",
-    color: "text-blue-600",
+    color: "text-primary",
   },
   {
     icon: RefreshCw,
     count: 0.5,
     suffix: "m",
     label: "Transactions Processed Daily.",
-    color: "text-green-600",
+    color: "text-accent",
   },
   {
     icon: MapPin,
     count: 10000,
     suffix: "+",
     label: "ATMs and Branches Globally.",
-    color: "text-purple-600",
+    color: "text-secondary-foreground",
   },
   {
     icon: Building,
     count: 50,
     suffix: "+",
     label: "Years of Trusted Banking Service.",
-    color: "text-orange-600",
+    color: "text-accent-foreground",
   },
 ]
 

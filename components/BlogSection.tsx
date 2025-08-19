@@ -1,9 +1,10 @@
+"use client";
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, User, ArrowRight } from "lucide-react"
-
 import { motion, useInView } from "framer-motion"
 import { fadeUp, sectionFade } from "@/lib/utils"
+import { useRef } from "react" // Added missing import
 
 export default function BlogSection() {
   const ref = useRef(null)
@@ -53,50 +54,75 @@ export default function BlogSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {blogPosts.map((post, index) => (
-            <motion.div variants={fadeUp}>
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="relative">
-                <img src={post.image || "/placeholder.svg"} alt={post.title} className="w-full h-48 object-cover" />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
-                    {post.category}
-                  </span>
-                </div>
-              </div>
-
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">{post.title}</h3>
-                <p className="text-muted-foreground mb-4 line-clamp-3">{post.excerpt}</p>
-
-                <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex items-center">
-                      <User className="w-4 h-4 mr-1" />
-                      {post.author}
-                    </div>
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {post.date}
-                    </div>
+            <motion.div 
+              key={index} // Added key prop
+              variants={fadeUp}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }} // Added hover animation
+              className="cursor-pointer"
+            >
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-md">
+                <div className="relative overflow-hidden">
+                  <motion.img 
+                    src={post.image || "/placeholder.svg"} 
+                    alt={post.title} 
+                    className="w-full h-48 object-cover"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.4 }}
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
+                      {post.category}
+                    </span>
                   </div>
                 </div>
 
-                <Button variant="outline" className="w-full group bg-transparent">
-                  Read More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                </Button>
-              </CardContent>
+                <CardContent className="p-6">
+                  <motion.h3 
+                    className="text-xl font-semibold text-foreground mb-3 line-clamp-2"
+                    whileHover={{ color: "#3b82f6" }} // Blue color on hover
+                  >
+                    {post.title}
+                  </motion.h3>
+                  <p className="text-muted-foreground mb-4 line-clamp-3">{post.excerpt}</p>
+
+                  <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center">
+                        <User className="w-4 h-4 mr-1" />
+                        {post.author}
+                      </div>
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {post.date}
+                      </div>
+                    </div>
+                  </div>
+
+                  <motion.div
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <Button variant="outline" className="w-full group bg-transparent">
+                      Read More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    </Button>
+                  </motion.div>
+                </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
 
-        <div className="text-center">
+        <motion.div 
+          className="text-center"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           <Button size="lg" variant="outline">
             View All Articles
           </Button>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section> // Fixed closing tag
   )
 }

@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-background text-foreground">
       {/* Main Footer Content */}
       <div className="py-16">
         <div className="container mx-auto px-4">
@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="lg:col-span-2 space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="bg-primary p-3 rounded-lg">
-                  <Image src="/placeholder.svg?height=40&width=40" alt="Certified" width={40} height={40} />
+                  <Image src="/assets/certified-1-1.png" alt="Certified" width={40} height={40} />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold">Since 1972</h4>
@@ -67,7 +67,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="bg-slate-800 p-4 rounded-lg">
+              <div className="bg-card p-4 rounded-lg">
                 <div className="flex items-center space-x-4">
                   <Mail className="w-6 h-6 text-primary" />
                   <div className="flex-1">
@@ -155,7 +155,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-slate-800">
+      <div className="border-t border-border">
         <div className="container mx-auto px-4 py-8">
           {/* Quick Links */}
           <div className="flex flex-wrap justify-center gap-8 mb-8">
@@ -185,7 +185,7 @@ export default function Footer() {
 
             <div className="flex items-center space-x-4">
               <Image
-                src="/placeholder.svg?height=60&width=200"
+                src="/assets/ntalccul-logo.png"
                 alt="NtaCCUL"
                 width={200}
                 height={60}
@@ -206,7 +206,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="text-center mt-6 pt-6 border-t border-slate-800">
+          <div className="text-center mt-6 pt-6 border-t border-border">
             <p className="text-sm text-muted-foreground">Copyright © 2025 NtaCCUL. All Rights Reserved.</p>
           </div>
         </div>
