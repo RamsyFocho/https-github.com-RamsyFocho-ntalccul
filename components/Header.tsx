@@ -21,7 +21,7 @@ export default function Header() {
               <div className="flex items-center space-x-4">
                 <Link href="/login" className="flex items-center space-x-2 hover:text-accent">
                   <Image
-                    src="https://ntaccul.org/wp-content/themes/flexibank/assets/images/icons/icon-2.png"
+                    src="/assets/icon-2.jpg"
                     alt="Login"
                     width={16}
                     height={16}
@@ -31,7 +31,7 @@ export default function Header() {
                 </Link>
                 <Link href="/register" className="flex items-center space-x-2 hover:text-accent">
                   <Image
-                    src="https://ntaccul.org/wp-content/themes/flexibank/assets/images/icons/icon-2.png"
+                    src="/assets/icon-2.jpg"
                     alt="Register"
                     width={16}
                     height={16}
@@ -42,14 +42,14 @@ export default function Header() {
               </div>
               <div className="flex items-center space-x-2">
                 <Image
-                  src="https://ntaccul.org/wp-content/themes/flexibank/assets/images/icons/icon-3.png"
+                  src="/assets/icon-3.jpg"
                   alt="Email"
                   width={16}
                   height={16}
                   className="w-4 h-4"
                 />
-                <a href="mailto:info@ntaccul.org" className="hover:text-accent">
-                  info@ntaccul.org
+                <a href="mailto:info@ntalccul.org" className="hover:text-accent">
+                  info@ntalccul.org
                 </a>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function Header() {
                 FAQ's
               </Link>
               <Link href="/debit-card" className="hover:text-accent">
-                NtaCCUL Card
+                NtalCCUL Card
               </Link>
               <Link href="/apply-now" className="hover:text-accent">
                 Apply Now
@@ -79,7 +79,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/assets/ntalccul-logo.png"
-                alt="NtaCCUL Logo"
+                alt="NtalCCUL Logo"
                 width={300}
                 height={95}
                 className="h-16 w-auto"
@@ -202,7 +202,7 @@ export default function Header() {
                   <Link href="/" onClick={() => setIsMenuOpen(false)}>
                     <Image
                       src="/assets/ntalccul-logo.png"
-                      alt="NtaCCUL Logo"
+                      alt="NtalCCUL Logo"
                       width={150}
                       height={48}
                       className="h-12 w-auto"
@@ -257,7 +257,7 @@ export default function Header() {
                     <a href="tel:+1234567890">Call Us</a>
                   </Button>
                   <div className="text-center text-white/50 text-sm mt-4">
-                    &copy; {new Date().getFullYear()} NtaCCUL. All rights reserved.
+                    &copy; {new Date().getFullYear()} NtalCCUL. All rights reserved.
                   </div>
                 </div>
               </motion.div>

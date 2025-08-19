@@ -5,21 +5,21 @@ import { CreditCard, Shield, Gift, Zap } from "lucide-react"
 export default function CreditCards() {
   const cards = [
     {
-      name: "NtaCCUL Classic",
+      name: "NtalCCUL Classic",
       type: "classic",
       color: "bg-gradient-to-r from-gray-700 to-gray-900",
       features: ["No annual fee", "Cashback rewards", "24/7 support", "Fraud protection"],
       limit: "Up to 500,000 FCFA",
     },
     {
-      name: "NtaCCUL Gold",
+      name: "NtalCCUL Gold",
       type: "gold",
       color: "bg-gradient-to-r from-yellow-400 to-yellow-600",
       features: ["Premium rewards", "Travel insurance", "Concierge service", "Airport lounge access"],
       limit: "Up to 2,000,000 FCFA",
     },
     {
-      name: "NtaCCUL Platinum",
+      name: "NtalCCUL Platinum",
       type: "platinum",
       color: "bg-gradient-to-r from-gray-300 to-gray-500",
       features: ["Unlimited cashback", "Global acceptance", "Priority customer service", "Exclusive offers"],

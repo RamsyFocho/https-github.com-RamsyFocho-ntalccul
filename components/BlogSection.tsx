@@ -15,7 +15,7 @@ export default function BlogSection() {
       excerpt: "Discover practical strategies to build your savings and achieve your financial goals this year.",
       author: "Financial Team",
       date: "March 15, 2024",
-      image: "/placeholder.jpg",
+      image: "/assets/growth-3-1.jpg",
       category: "Savings",
     },
     {

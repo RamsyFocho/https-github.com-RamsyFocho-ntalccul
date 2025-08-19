@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="lg:col-span-2 space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="bg-primary p-3 rounded-lg">
-                  <Image src="/assets/certified-1-1.png" alt="Certified" width={40} height={40} />
+                  <Image src="/assets/ntalccul-logo.png" alt="Certified" width={40} height={40} />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold">Since 1972</h4>
@@ -72,8 +72,8 @@ export default function Footer() {
                   <Mail className="w-6 h-6 text-primary" />
                   <div className="flex-1">
                     <h4 className="font-semibold">
-                      <a href="mailto:info@ntaccul.org" className="hover:text-primary">
-                        info@ntaccul.org
+                      <a href="mailto:info@ntalccul.org" className="hover:text-primary">
+                        info@ntalccul.org
                       </a>
                     </h4>
                     <p className="text-sm text-muted-foreground">Send your queries.</p>
@@ -89,7 +89,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link href="/credit-card" className="hover:text-primary transition-colors">
-                    NtaCCUL Card
+                    NtalCCUL Card
                   </Link>
                 </li>
               </ul>
@@ -103,7 +103,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/trade-fx" className="hover:text-primary transition-colors">
-                    NtaCCUL Card
+                    NtalCCUL Card
                   </Link>
                 </li>
                 <li>
@@ -140,7 +140,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/debit-card" className="hover:text-primary transition-colors">
-                    NtaCCUL Card
+                    NtalCCUL Card
                   </Link>
                 </li>
                 <li>
@@ -186,7 +186,7 @@ export default function Footer() {
             <div className="flex items-center space-x-4">
               <Image
                 src="/assets/ntalccul-logo.png"
-                alt="NtaCCUL"
+                alt="NtalCCUL"
                 width={200}
                 height={60}
                 className="h-12 w-auto"
@@ -207,7 +207,7 @@ export default function Footer() {
           </div>
 
           <div className="text-center mt-6 pt-6 border-t border-border">
-            <p className="text-sm text-muted-foreground">Copyright © 2025 NtaCCUL. All Rights Reserved.</p>
+            <p className="text-sm text-muted-foreground">Copyright © 2025 NtalCCUL. All Rights Reserved.</p>
           </div>
         </div>
       </div>
